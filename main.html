@@ -1,0 +1,47 @@
+<head>
+  <title>Homework test : Exports</title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta
+      name="viewport"
+      content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+  />
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+</head>
+
+<body>
+  {{> Global}}
+</body>
+
+<template name="Global">
+    <div class="CadreEnglobant"><br/>Exportations<br/>
+      <div class="CadreSaisieNewExport"><br/>
+        <input type="text" id="inpNewExport" name="inpNewExport" value="" placeholder="Export..."/>
+        <button class="BtnExport"
+          type="button">
+          Export
+        </button>
+        <br/><br/>
+        <div class="Breaker"></div>
+        {{> ListeExportsNotComplete}}
+        <div class="Breaker"></div>
+        {{> ListeExportsComplete}}
+      </div>
+       
+    </div>
+</template>
+
+<template name="ListeExportsNotComplete">
+  <div class="Entete">Exports en cours</div>
+  {{#each ExportsNotComplete}}
+    <div class="NomExport">{{Libelle}}</div><progress value="{{Completion}}" max="100"></progress><div class="UrlExport"></div><br/> 
+  {{/each}}
+</template>
+
+<template name="ListeExportsComplete">
+  <div class="Entete">Exports terminés</div>
+  {{#each ExportsComplete}}
+  <div class="NomExport">{{Libelle}}</div><progress value="100" max="100"></progress><div class="UrlExport"> => {{URL}}</div><br/> 
+  {{/each}}
+</template>
