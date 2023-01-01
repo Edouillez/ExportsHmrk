@@ -1,0 +1,61 @@
+body {
+  padding: 10px;
+  background-color:rgb(171, 200, 220);
+  font-family: "Verdana", sans-serif;
+  font-size: 1em;
+}
+
+.CadreEnglobant {
+  background-color:rgb(116, 182, 225);
+  width: 1000px;
+  margin: auto;
+  border: solid 2px rgb(255, 123, 86);
+  border-top-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.titre {
+  display: inline;
+  font-size: 1.3em;
+}
+
+.Breaker {
+  width: 750px;
+  height: 2px;
+  margin: auto;
+  background-color:rgb(70, 158, 217);
+}
+
+.NomExport{
+  width: 350px;
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  font-weight: normal;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.UrlExport{
+  width: 350px;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+progress[value] {
+  display: inline-block;
+  background-color: #eee;
+  color: rgb(46, 112, 138); 
+  width: 150px;
+  height: 15px;
+  border-radius: 7px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+
